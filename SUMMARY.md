@@ -2,3 +2,7 @@
 
 * [Chaospedia](README.md)
 
+## Failed Ideas
+
+* [TCP Hole Punching for Minecraft](failed-ideas/tcp-hole-punching-for-minecraft.md)
+

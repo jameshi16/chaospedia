@@ -3,6 +3,7 @@
 * [Chaospedia](README.md)
 * [GK61 series manual](gk61-series-manual.md)
 * [Self-Signed Certificates](self-signed-certificates.md)
+* [Git Clone without Ancestry](git-clone-without-ancestry.md)
 
 ## Failed Ideas
 

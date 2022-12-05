@@ -14,7 +14,7 @@ Without first and foremost checking WireShark, I made an assumption that Minecra
 
 While UDP hole punching is prevalent to allow gamers to play co-op games, Minecraft hasn't ventured into that space yet. Hence, the most idealistic way to play Minecraft with your friends would be to host a Minecraft server.
 
-A Minecraft Server runs on TCP, and requires portforwarding on the host's part; otherwise, the server is managed by an organization, or via a VPS or cloud. However, privacy-crazed individuals like myself want to run a server without exposing it to the world, potentially from the comfort of a university dorm \(i.e. no portforwarding\) for free. 
+A Minecraft Server runs on TCP, and requires portforwarding on the host's part; otherwise, the server is managed by an organization, or via a VPS or cloud. However, privacy-crazed individuals like myself want to run a server without exposing it to the world, potentially from the comfort of a university dorm (i.e. no portforwarding) for free.&#x20;
 
 One way to do such a thing is to host a proxy server via Oracle Cloud, but Oracle Cloud is _limited_ by region and bandwidth.
 
@@ -284,9 +284,8 @@ func main() {
 
 This uses the `go-reuseport` library, which is an essential package to make TCP hole punching work. The code essentially opens port `25565` as both a listener and dialer, which is essential for a successful hole punch. Port `25566` is the actual Minecraft server, while port `8083` is the manager port from the earlier code block for the rendezvous server.
 
-Theoratically, when a Minecraft client tries to connect to the rendevous server **and** the Minecraft server **with the** _**same**_ **IP address & port**, the rendevous server will send the Minecraft client's connection information to the Minecraft server \(behind a NAT\), and the Minecraft server will desperately attempt to connect to the Minecraft client.
+Theoratically, when a Minecraft client tries to connect to the rendevous server **and** the Minecraft server **with the **_**same**_** IP address & port**, the rendevous server will send the Minecraft client's connection information to the Minecraft server (behind a NAT), and the Minecraft server will desperately attempt to connect to the Minecraft client.
 
 Since the Minecraft client has _tried_ contacting the Minecraft server before, the tuple entry `(Minecraft Server IP, Minecraft Server Port, Minecraft Client IP, Minecraft Client Port)` shuold be on the client's NAT, which should allow the Minecraft server to connect to the client via a reverse connection. Even if this fails, the action of an attempted connection will add the tuple entry `(Minecraft Client IP, Minecraft Client Port, Minecraft Server IP, Minecraft Server Port)` into the server's NAT.
 
 With both NATs possessing the correct entries, there should be a successful connection - _at least in theory_.
-

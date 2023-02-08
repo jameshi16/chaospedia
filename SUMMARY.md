@@ -4,6 +4,7 @@
 * [GK61 series manual](gk61-series-manual.md)
 * [Self-Signed Certificates](self-signed-certificates.md)
 * [Git Clone without Ancestry](git-clone-without-ancestry.md)
+* [Deleting old network profiles (Windows)](deleting-old-network-profiles-windows.md)
 
 ## Failed Ideas
 

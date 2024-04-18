@@ -1,4 +1,4 @@
-# Git Clone without Ancestry
+# 📃 Git Clone without Ancestry
 
 My website, [https://codingindex.xyz](https://codingindex.xyz) is run on GitHub pages. Whenever I write a blog post and push to the repository, a GitHub actions pulls that new blog post, does some processing, and publishes the resulting static site in the same repository.
 

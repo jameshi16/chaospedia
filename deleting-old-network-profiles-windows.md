@@ -2,7 +2,7 @@
 description: Ah yes, I've connected to StarBucks Public Wifi 1239
 ---
 
-# Deleting old network profiles (Windows)
+# 🗑️ Deleting old network profiles (Windows)
 
 Sometimes, Windows creates multiple network profiles for the same WiFi connection even though no one has reconfigured the router, your laptop, or anything in-between.
 

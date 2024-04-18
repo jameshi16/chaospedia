@@ -4,7 +4,7 @@ description: >-
   any additional downloads on the client's end.
 ---
 
-# TCP Hole Punching for Minecraft
+# 👊 TCP Hole Punching for Minecraft
 
 ## Failure TL;DR
 

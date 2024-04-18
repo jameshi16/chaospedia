@@ -2,7 +2,7 @@
 description: How to properly generate self-signed certificates to use on all platforms
 ---
 
-# Self-Signed Certificates
+# 🪪 Self-Signed Certificates
 
 During development, or when self-hosing any servers that require HTTPS connecitons, there sometimes comes a need to use self-signed certificates. There are many sources online that provide a single command to generate both the certificate and the key, however, that certificate is usually doubles as the Certificate Authority (CA), which I feel is bad practice to cultivate and use directly.
 

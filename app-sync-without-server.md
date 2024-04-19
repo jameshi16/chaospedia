@@ -90,3 +90,9 @@ If the leader is dead (via heartbeat in `leader.lock`), the balloting process st
 
 * An offline device suddenly going online might break things
 * At each user-facing conflict resolution step, the user has a chance of blowing up the whole thing
+
+## Addendum 1
+
+Instead of doing the above, it might be better to employ a CRDT system. Since file-sync is involved, we cannot rely on a singular database; ideally, the appending should create multiple files.
+
+Allow the user to compress the size of the database by eventually writing it to an SQLite store or something. Requires the user to confirm that _the_ device is the only one on the network.

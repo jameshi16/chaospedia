@@ -57,3 +57,11 @@ cat domain.crt rootCA.crt > server.crt
 ```
 
 Whatever applications that will be serving HTTPS should use `server.crt` and `domain.key`. Any clients should use their own platform methods to install the `rootCA.crt`into their own certificate managers.
+
+## Viewing Certificates
+
+To view details of a certificate, use the following snippet:
+
+```
+openssl x509 -text -in something.crt
+```
